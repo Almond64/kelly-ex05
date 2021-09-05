@@ -13,11 +13,19 @@ import java.util.Scanner;
 
 public class Solution05 {
     public static void main(String[] args) {
-        System.out.println("What is the first number: ");
+
         Scanner input = new Scanner(System.in);
-        int numberOne = input.nextInt();
+
+        /*
+        Inputs from the user will be strings.
+        Convert the strings to integers before making calculations
+        */
+        System.out.println("What is the first number: ");
+        String inputOne = input.next();
+        int numberOne = Integer.parseInt(inputOne);
         System.out.println("What is the second number: ");
-        int numberTwo = input.nextInt();
+        String inputTwo = input.next();
+        int numberTwo = Integer.parseInt(inputTwo);
 
         int sum = numberOne + numberTwo;
         System.out.printf("%d + %d = %d\n", numberOne, numberTwo, sum);
